@@ -37,6 +37,31 @@ const showPlayerDetails = (players) => {
 
 }
 
-const details = () => {
+const details = (id) => {
+
+    const url = `https://www.thesportsdb.com/api/v1/json/2/lookupplayer.php?id=${id}`;
+    fetch(url)
+    .then(res => res.json())
+    .then(data => setDetails(data.players[0]));
+
+}
+
+const setDetails = (info) => {
+
+    document.getElementById('detail-container').innerHTML = `
+    <div class="card border p-5">
+    <div class="pro-pic">
+        <img class="img-fluid w-50" src="${info.strThumb}" alt="">
+    </div>
+    <h2> Name: ${info.strPlayer} </h2>
+    <h5> Country: ${info.strNationality} </h5>
+    <p></p>
+
+    </div>
+    
+    `;
+
+
+
 
 }
