@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>hello mamu</h1>
+    <h1 class="text-danger text-center my-5">Welcome To Player Info Website</h1>
 
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center">
                 <div class="d-flex">
-                    <input id="search-box" class="form-control me-2" type="search" placeholder="write a player name" aria-label="Search">
+                    <input id="search-box" class="form-control me-2" type="search" placeholder="write a football player name" aria-label="Search">
                     <button id="search-btn" class="btn btn-outline-success" type="submit" onclick="allPlayer()">Search</button>
                   </div>
                   <div id="player-container">
+                      <p id="err1"> </p>
 
                    
                   </div>
@@ -34,8 +35,6 @@
             </div>
         </div>
     </div>
-
-
     <!-- js linkup  -->
     <script src="./app.js"></script>
 </body>
